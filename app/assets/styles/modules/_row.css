@@ -9,6 +9,10 @@
     margin-right: -100px;
   }
 
+  &--gutters-small {
+    margin-right: -45px;
+  }
+
   &--gutters > div {
     padding-right: 65px;
     box-sizing: border-box;
@@ -16,6 +20,14 @@
 
   &--gutters-large > div {
     padding-right: 100px;
+  }
+
+  &--gutters-small > div {
+    padding-right: 45px;
+  }
+
+  &--t-padding {
+    padding-top: 80px;
   }
 
   &__b-margin-until-medium {
@@ -39,6 +51,17 @@
     &__medium-8 {
       float: left;
       width: 66.66%;
+    }
+  }
+
+  /* Begin Equal Height Rules */
+  &--equal-height-at-medium {
+    @mixin atMedium {
+      display: flex;
+    }
+    & > div {
+      float: none;
+      display: flex;
     }
   }
 } 
