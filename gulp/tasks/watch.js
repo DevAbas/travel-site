@@ -9,6 +9,10 @@ gulp.task('cssInject',['styles'],function(){
     .pipe(browserSync.stream())
 });
 
+gulp.task('scriptsRefresh', ['scripts'], function (){
+  browserSync.reload();
+});
+
 /*Watch Task*/
 gulp.task('watch', function(){
 
@@ -23,7 +27,12 @@ gulp.task('watch', function(){
       browserSync.reload();
     });
 
+    watch('./app/assets/scripts/**/*.js', function(){
+      gulp.start('scriptsRefresh');
+    })
+
     watch('./app/assets/styles/**/*.css', function(){
       gulp.start('cssInject');
     });
+
   });
