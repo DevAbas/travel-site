@@ -14,9 +14,7 @@ class StickyHeader {
   }
 
   addSmoothScrolling(){
-    this.headerLinks.smoothScroll({
-      easing: 'easeInOutCubic'
-    });
+    this.headerLinks.smoothScroll();
   }
 
   createHeaderWaypoint(){
